@@ -1,15 +1,9 @@
 # About DeskBuddy
 ## What is Deskbuddy?
-Built on top of the [Pieces OS](https://www.npmjs.com/package/@pieces.app/pieces-os-client), Deskbuddy is a progressive web application that allows developers to uncover their strengths and weaknesses based on their day-to-day activities and then come up with solutions by offering helpful insights on your code and development activities. These may include getting your most used programming language off the data gotten from snippets and then getting random facts about the language, getting a list of your saved websites and other related websites, or simply getting a definite count on a particular activity and then making comparisons between periods to get an insight on your productivity. Sometimes, developers do not realize how much they need a particular piece of information such as a related website to their code until it is provided and easy to access, this is one of the initiatives behind having Deskbuddy as a code companion.
-
-The goal of this project is to build a code companion that can shed light on different statistics related to your code, offer quick assistance to your code and encourage better coding habits via the copilot, view links to resources you may want to read later, a brief clipboard history, and more. 
-
-This dashboard will not only display information but also allow users to interact with and manipulate their personal data settings, adapting to the preferences of each developer. Although the endpoints provided through the Pieces SDK are numerous, Deskbuddy aims to utilize and showcase specific endpoints around the `ActivitesApi()`  that will be needed to implement the features. 
-
+Built on top of the [Pieces OS](https://www.npmjs.com/package/@pieces.app/pieces-os-client), Deskbuddy is a progressive web application that allows developers to uncover their strengths and weaknesses based on their day-to-day activities and then come up with solutions by offering helpful insights on your code and development activities. These may include getting your most used programming language off the data gotten from snippets and then getting random facts about the language, getting a list of your saved websites and other related websites, or simply getting a definite count on a particular activity and then making comparisons between periods to get an insight on your productivity. 
 You can explore more endpoints and dive into the infinite possibilities of building with Pieces OS by checking out the readme on the Open Source by Pieces repo on GitHub.             
 
 ## What to Expect from the Deskbuddy Application
-In this section, we will dive into the potential features of Deskbuddy and specifically how it aims to enhance developers’ productivity. Here is some helpful developer information you can get right from the Deskbuddy application:
 - Statistics and Insights on code: The Deskbuddy application will provide information about your code and overall development workflow. The idea behind this is for developers, while building applications and solving problems, to get insights into their activities after a given period.
 Copilot Conversations: By leveraging the Pieces OS client, a custom copilot will be incorporated into the Deskbuddy application. The copilot will basically serve the purpose of providing information on your development activities when you ask for them. For instance, you can simply ask the copilot, “What website did I visit the most this week?”, and it replies accordingly. 
 - View Related Links: One of the functionalities provided by the Pieces OS is getting a couple of related links when a snippet is saved. These links include the origin website(if the snippet was saved from the web) and other related links that enable developers to get more understanding and insights on that particular snippet. The action of saving snippets can be tied to working on a particular project/stack or seeking to learn more and perform actions on the snippet, which is why the Deskbuddy application aims to enhance these actions by providing a widget that contains recent related links for easy accessibility by the user. 
@@ -17,12 +11,7 @@ Copilot Conversations: By leveraging the Pieces OS client, a custom copilot will
 - Track your Productivity: From the biggest to the littlest piece of activity, Deskbuddy keeps track of all. Saved a piece of code? Added a new website? Made use of the Copilot? With Deskbuddy, you will be able to see all the actions you take, how frequently you take them, and make comparisons to determine your productivity in a given period. 
 
 A Peek into the Technical Details of Deskbuddy: Exploring Endpoints to be Used
-In this section, we will take a quick dive into the first bit of technical details around the build process of Deskbuddy and some of the endpoints provided by the Pieces SDK to implement these features.
-
-You can read more about the client on [NPM](https://www.npmjs.com/package/@pieces.app/pieces-os-client)
-
-Note: To utilize these endpoints, ensure you have the Pieces OS package installed. If you haven’t, you can do so by following the steps below:
-
+To utilize these endpoints, ensure you have the Pieces OS package installed. If you haven’t, you can do so by following the steps below:
 Using npm:
 ```
 npm install @pieces.app/pieces-os-client
