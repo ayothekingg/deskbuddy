@@ -4,13 +4,12 @@ Built on top of the [Pieces OS](https://www.npmjs.com/package/@pieces.app/pieces
 
 The goal of this project is to build a code companion that can shed light on different statistics related to your code, offer quick assistance to your code and encourage better coding habits via the copilot, view links to resources you may want to read later, a brief clipboard history, and more. 
 
-This dashboard will not only display information but also allow users to interact with and manipulate their personal data settings, adapting to the preferences of each developer. Although the endpoints provided through the Pieces SDK are numerous, Deskbuddy aims to utilize and showcase specific endpoints around the ActivitesApi()  that will be needed to implement the features. 
+This dashboard will not only display information but also allow users to interact with and manipulate their personal data settings, adapting to the preferences of each developer. Although the endpoints provided through the Pieces SDK are numerous, Deskbuddy aims to utilize and showcase specific endpoints around the `ActivitesApi()`  that will be needed to implement the features. 
 
 You can explore more endpoints and dive into the infinite possibilities of building with Pieces OS by checking out the readme on the Open Source by Pieces repo on GitHub.             
 
 ## What to Expect from the Deskbuddy Application
 In this section, we will dive into the potential features of Deskbuddy and specifically how it aims to enhance developers’ productivity. Here is some helpful developer information you can get right from the Deskbuddy application:
-
 - Statistics and Insights on code: The Deskbuddy application will provide information about your code and overall development workflow. The idea behind this is for developers, while building applications and solving problems, to get insights into their activities after a given period.
 Copilot Conversations: By leveraging the Pieces OS client, a custom copilot will be incorporated into the Deskbuddy application. The copilot will basically serve the purpose of providing information on your development activities when you ask for them. For instance, you can simply ask the copilot, “What website did I visit the most this week?”, and it replies accordingly. 
 - View Related Links: One of the functionalities provided by the Pieces OS is getting a couple of related links when a snippet is saved. These links include the origin website(if the snippet was saved from the web) and other related links that enable developers to get more understanding and insights on that particular snippet. The action of saving snippets can be tied to working on a particular project/stack or seeking to learn more and perform actions on the snippet, which is why the Deskbuddy application aims to enhance these actions by providing a widget that contains recent related links for easy accessibility by the user. 
@@ -119,7 +118,7 @@ With this method, you can:
 Expanding Your Horizon of Knowledge with the `.websites` Attribute
 A common activity of every developer, irrespective of skill level, is learning. The `.websites` attribute allows you to easily access helpful resources(websites) that relate to your code. In addition to providing data around a snippet such as the name, anchors, and tags, the `AssetsApi` endpoint gives you access to a list of all websites present in the application. Similar to other functionality in communicating with the API, you can use `.websites` for a number of things:  
 
-Counting the total number of websites that have been collected over time 
+- Counting the total number of websites that have been collected over time 
 - Give a rank of your most visited sites in a given period
 - View all code that is currently related to a specific website 
 - View how many times a website has been added to anything and is related to some data you have
