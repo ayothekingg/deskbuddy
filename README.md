@@ -10,7 +10,7 @@ Copilot Conversations: By leveraging the Pieces OS client, a custom copilot will
 - Breakdown on Tech Stack: With the data from saved snippets, Deskbuddy gives a breakdown of the most used tech stacks by a particular user in a given period, ensuring users stay aware and up-to-date with their development activities and preferences. 
 - Track your Productivity: From the biggest to the littlest piece of activity, Deskbuddy keeps track of all. Saved a piece of code? Added a new website? Made use of the Copilot? With Deskbuddy, you will be able to see all the actions you take, how frequently you take them, and make comparisons to determine your productivity in a given period. 
 
-A Peek into the Technical Details of Deskbuddy: Exploring Endpoints to be Used
+## A Peek into the Technical Details of Deskbuddy: Exploring Endpoints to be Used
 To utilize these endpoints, ensure you have the Pieces OS package installed. If you haven’t, you can do so by following the steps below:
 Using npm:
 ```
