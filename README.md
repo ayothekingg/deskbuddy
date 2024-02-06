@@ -61,7 +61,7 @@ The `AssetsApi()` endpoint is an important and interesting endpoint in the devel
 - Stay extra aware of your coding activities by viewing the languages you use the most.
 - Expand your knowledge by getting helpful suggestion queries relating to a snippet.
 
-## Getting Started with Assets: Creating A New Asset
+### Getting Started with Assets: Creating A New Asset
 Having a fair knowledge of assets is important in the build process of Deskbuddy and generally using the Pieces SDK. Assets are primarily used to manage seeded data that comes into the application. The asset object provides data on snippets and the ability to manipulate them. In this section, I will walk you through performing basic operations on assets such as creating, updating, and deleting.
 
 ### Creating Assets
@@ -91,7 +91,7 @@ console.log("Here is the asset created": assets)
 ```
 You can then check the several properties and information on snippets in an asset. 
 
-Getting Snippet Count with `.AssetsSnapshot()`
+### Getting Snippet Count with `.AssetsSnapshot()`
 Curious to know and keep track of the total number of snippets at any given time? You can achieve this by using the `.AssetsSnapshot `method from the `Assets.Api() ` endpoint. When you pass in an empty object as the `requestParameter` in the `.AssetsSnapshot` method, you get the full information on all the snippets present in the application. Here’s an example:
 ```
 new Pieces.AssetsApi().assetsSnapshot({}).then((assets) => {
