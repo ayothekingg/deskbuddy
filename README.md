@@ -150,8 +150,8 @@ new Pieces.ActivitiesApi().activitiesSnapshot({}).then((activity) => {
 Being an open source project, we’re always happy to welcome new contributors! The Deskbuddy application will be built with React and primarily with the help of the Pieces TypeScript SDK. We’ve got a couple of interesting open issues for you to get started with building. Before you begin, here are a few tips to know and tools you need to have installed or get familiar with just so you have a head start:
 
 - Download the [Pieces for Developers package](https://docs.pieces.app/installation-getting-started/what-am-i-installing), which installs the Pieces OS and Pieces for Developers Desktop Application. The Deskbuddy application will run on Pieces OS.
-- Install the Pieces NPM package and get familiar with its documentation.
-- Check out the Example-TS repository to see some of these endpoints in action.
-- Check the open issues on Deskbuddy and feel free to share your thoughts in the discussion board. 
+- Install the [Pieces NPM](https://www.npmjs.com/package/@pieces.app/pieces-os-client) package and get familiar with its documentation.
+- Check out the [Example-TS](https://github.com/pieces-app/example-typescript) repository to see some of these endpoints in action.
+- Check the [open issues](https://github.com/ayothekingg/deskbuddy/issues) on Deskbuddy and feel free to share your thoughts in the discussion board. 
 
 
