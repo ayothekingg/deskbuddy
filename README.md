@@ -1,16 +1,23 @@
-# About DeskBuddy
-## What is Deskbuddy?
-Built on top of the [Pieces OS](https://www.npmjs.com/package/@pieces.app/pieces-os-client), Deskbuddy is a progressive web application that allows developers to uncover their strengths and weaknesses based on their day-to-day activities and then come up with solutions by offering helpful insights on your code and development activities. These may include getting your most used programming language off the data gotten from snippets and then getting random facts about the language, getting a list of your saved websites and other related websites, or simply getting a definite count on a particular activity and then making comparisons between periods to get an insight on your productivity. 
-You can explore more endpoints and dive into the infinite possibilities of building with Pieces OS by checking out the readme on the Open Source by Pieces repo on GitHub.             
+# <p align="center"> DeskBuddy 
+### <p align="center"> Deskbuddy is a progressive web application that allows developers to uncover their strengths and weaknesses based on their day-to-day activities and then come up with solutions by offering helpful insights on your code and development activities. 
 
-## What to Expect from the Deskbuddy Application
+### Table of Contents
+- [What to Expect](#what-to-expect)
+- [Getting Started](#getting-started)
+- [Exploring Endpoints](#exploring-endpoints)
+  - [The `ConnectorApi` endpoint](#the-connectorapi-endpoint)
+  - [The `AssetsApi` endpoint](#the-assetsapi-endpoint)
+  - [The `ActivitiesApi` endpoint](#the-activitiesapi-endpoint)
+- [Contributing](#contributing)
+
+#### What to Expect 
 - Statistics and Insights on code: The Deskbuddy application will provide information about your code and overall development workflow. The idea behind this is for developers, while building applications and solving problems, to get insights into their activities after a given period.
 Copilot Conversations: By leveraging the Pieces OS client, a custom copilot will be incorporated into the Deskbuddy application. The copilot will basically serve the purpose of providing information on your development activities when you ask for them. For instance, you can simply ask the copilot, “What website did I visit the most this week?”, and it replies accordingly. 
 - View Related Links: One of the functionalities provided by the Pieces OS is getting a couple of related links when a snippet is saved. These links include the origin website(if the snippet was saved from the web) and other related links that enable developers to get more understanding and insights on that particular snippet. The action of saving snippets can be tied to working on a particular project/stack or seeking to learn more and perform actions on the snippet, which is why the Deskbuddy application aims to enhance these actions by providing a widget that contains recent related links for easy accessibility by the user. 
 - Breakdown on Tech Stack: With the data from saved snippets, Deskbuddy gives a breakdown of the most used tech stacks by a particular user in a given period, ensuring users stay aware and up-to-date with their development activities and preferences. 
 - Track your Productivity: From the biggest to the littlest piece of activity, Deskbuddy keeps track of all. Saved a piece of code? Added a new website? Made use of the Copilot? With Deskbuddy, you will be able to see all the actions you take, how frequently you take them, and make comparisons to determine your productivity in a given period. 
 
-## A Peek into the Technical Details of Deskbuddy: Exploring Endpoints to be Used
+#### Getting Started
 To utilize these endpoints, ensure you have the Pieces OS package installed. If you haven’t, you can do so by following the steps below:
 Using npm:
 ```
@@ -28,7 +35,8 @@ import * as pieces from '@pieces.app/pieces-os-client
 
 All set up! You can then proceed to utilize the provided endpoints, some of which we will discuss in this documentation and also in subsequent docs. 
 
-## The `ConnectorApi()` endpoint
+#### Exploring Endpoints
+#### The `ConnectorApi()` endpoint
 The first step in making use of Pieces functionalities is to connect your application to the Pieces OS to facilitate communication between Deskbuddy and the server, this can be done by using the `.connect` method from the `ConnectorApi()` endpoint. An asynchronous function will be created and called to connect the Deskbuddy to the Pieces server. Before then, create your `tracked_application` object which contains information about the name, version and platform. Here’s an example:
 
 ```
@@ -53,7 +61,7 @@ async function connect(): Promise<JSON> {
 
 Here, we create a `connect()` asynchronous function that returns a JSON object and then proceed to use the `.connect` method, passing the `seededConnectorConnection` property as an object, which also takes in the application property(data about the `tracked_application` passed in as an object). After successfully connecting with the Pieces OS by following these steps, your application should be up and running. 
 
-## The `AssetsApi()` endpoint
+#### The `AssetsApi()` endpoint
 The `AssetsApi()` endpoint is an important and interesting endpoint in the development of Deskbuddy as it contains data on snippets (assets) and offers a wide range of functionalities for operations such as create, delete, search, etc. When you call your `assetsSnapShot()` and pass an empty object as the `requestParameter`, the asset is returned, which contains a variety of properties and information on a particular snippet. With the `AssetsApi()` endpoint, you can:
 - Create, update and delete assets. 
 - Get a definite number of snippets present at a given period. 
@@ -91,7 +99,7 @@ console.log("Here is the asset created": assets)
 ```
 You can then check the several properties and information on snippets in an asset. 
 
-### Getting Snippet Count with `.AssetsSnapshot()`
+#### Getting Snippet Count with `.AssetsSnapshot()`
 Curious to know and keep track of the total number of snippets at any given time? You can achieve this by using the `.AssetsSnapshot `method from the `Assets.Api() ` endpoint. When you pass in an empty object as the `requestParameter` in the `.AssetsSnapshot` method, you get the full information on all the snippets present in the application. Here’s an example:
 ```
 new Pieces.AssetsApi().assetsSnapshot({}).then((assets) => {
@@ -104,7 +112,7 @@ With this method, you can:
 - Keep track of your coding activities by making comparisons between assets. 
 
 
-Expanding Your Horizon of Knowledge with the `.websites` Attribute
+#### Expanding Your Horizon of Knowledge with the `.websites` Attribute
 A common activity of every developer, irrespective of skill level, is learning. The `.websites` attribute allows you to easily access helpful resources(websites) that relate to your code. In addition to providing data around a snippet such as the name, anchors, and tags, the `AssetsApi` endpoint gives you access to a list of all websites present in the application. Similar to other functionality in communicating with the API, you can use `.websites` for a number of things:  
 
 - Counting the total number of websites that have been collected over time 
@@ -124,7 +132,7 @@ new Pieces.AssetsApi().assetsSnapshot({}).then((_) => {
 ```
 Here we pass in an empty object(as previously mentioned) as a `requestParameter` in the `.assetsSnapshot`. We then proceed to get the ID of the first asset which will also serve as a `requestParameter` for `.assetSnapshot()`(note this is without the “s”) from the `AssetApi()` endpoint. The `AssetApi()` endpoint returns data on a single asset. It provides a more direct way to manage data and perform further operations on an asset. After the ID of a specific asset is passed in, we can then proceed to get the website associated with that particular asset by using the `.websites` attribute. You can also get the data of all websites associated with a particular snippet.
 
-## The `ActivitiesApi()` endpoint
+#### The `ActivitiesApi()` endpoint
 The `ActivitiesApi()` endpoint, as you would guess, offers the functionality of managing your development activities. The  `ActivitiesApi()` allows you to create, delete, and get a snapshot of all the available activities present in the application. The idea behind tracking development activities is to allow developers to stay aware of all they do and take conscious actions to boost their productivity.  With the `ActivitiesApi()` endpoint, you can:
 - Track all your coding activities
 - Get a definite of all your activities in a given period
@@ -138,7 +146,7 @@ new Pieces.ActivitiesApi().activitiesSnapshot({}).then((activity) => {
 }
 ```
 
-## Interested in Contributing? There’s a spot for you!
+#### Contributing
 Being an open source project, we’re always happy to welcome new contributors! The Deskbuddy application will be built with React and primarily with the help of the Pieces TypeScript SDK. We’ve got a couple of interesting open issues for you to get started with building. Before you begin, here are a few tips to know and tools you need to have installed or get familiar with just so you have a head start:
 
 - Download the [Pieces for Developers package](https://docs.pieces.app/installation-getting-started/what-am-i-installing), which installs the Pieces OS and Pieces for Developers Desktop Application. The Deskbuddy application will run on Pieces OS.
