@@ -32,8 +32,33 @@ You can then import the library for usage in your application inside of a file:
 import * as pieces from '@pieces.app/pieces-os-client
 ```
 
-
-All set up! You can then proceed to utilize the provided endpoints, some of which we will discuss in this documentation and also in subsequent docs. 
+Also, we will be using Tailwind CSS as our default styling library, you can install Tailwind CSS by following these steps:
+1. Open your terminal and run the Tailwind CSS install command
+```
+npm install -D tailwindcss
+npx tailwindcss init
+```
+2. Configure your template paths in your `tailwind.config.js`
+```
+export default {
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+};
+```
+3. Add the tailwind directive to your root input.css file.
+```
+@tailwind base
+@tailwind components
+@tailwind utilities
+```
+4.  Run the Tailwind CSS build process.
+```
+npx tailwindcss -i ./src/index.css -o ./dist/output.css --watch
+```
+All set! All Tailwind CSS styles should behave as expected after this setup. 
 
 #### Exploring Endpoints
 #### The `ConnectorApi()` endpoint
